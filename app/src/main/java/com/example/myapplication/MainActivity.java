@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (email.getText().toString() != null && password.getText().toString() != null){
+                if (email.getText().toString().equals(null) && password.getText().toString().equals(null)){
                     button.setBackgroundColor(getColor(R.color.orange));
                 }
-                if (email.getText().toString() == "admin" && password.getText().toString() == "admin"){
+                if (email.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     Toast.makeText(MainActivity.this,"Вы успешно зарегистрировались",Toast.LENGTH_LONG);
                     button.setVisibility(View.GONE);
                     textView.setVisibility(View.GONE);
